@@ -91,7 +91,19 @@ class Wildfire {
    score for your submission.
     1. The auto-grading build should begin automatically when you push your
        code to GitHub.
-    2. If your program will not compile, you will not get credit
+
+## Building and Testing
+
+A `Makefile` is provided to automate compilation and testing:
+- **Run all unit tests**: `make test-all`
+- **Run individual unit tests**:
+  - `make test-1-wildfire`: Runs Wildfire simulation test part 1.
+  - `make test-2-wildfire`: Runs Wildfire simulation test part 2.
+  - `make test-3-wildfire`: Runs Wildfire simulation test part 3.
+- **Run memory leak check**: `make test-mem` (runs Valgrind on test 3).
+- **Clean build artifacts**: `make clean`
+
+> **Note for macOS / Xcode users**: Valgrind is not natively supported on macOS. If you are using macOS command line tools (Xcode), you cannot directly execute `valgrind` / `make test-mem` locally. Please launch a **GitHub Codespaces** instance on GitHub (or use a Linux container) to run memory leak checks.
 
 ## Important Notes:
 - Projects will be graded on whether they correctly solve the problem, and
